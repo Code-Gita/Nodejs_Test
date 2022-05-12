@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>WebPage</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="box" id="heading">
+      <% if(kindOfDay == "Friday"){ %>
+            <p>It is <%= kindOfDay %></p>
+      <% } else { %>
+        <p>It is not a Thursday</p>
+      <% } %>
+    </div>
+
+<div class="box">
+
+    <% for(var i=0; i< newItem.length; i++) { %>
+      <div class="item">
+        <input type="checkbox" >
+          <p> <%= newItem[i] %> </p>
+      </div>
+
+    <% } %>
+    <form class="item" action="/" method="post">
+      <input type="text" name="text1" placeholder="Enter your next TODO" autocomplete="off">
+      <button type="submit" name="button">+</button>
+    </form>
+
+</div>
+
+
+  </body>
+</html>
